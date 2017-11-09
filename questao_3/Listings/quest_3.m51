@@ -1,0 +1,199 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/09/2017  19:44:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\quest_3.obj TO .\Objects\quest_3 PRINT (.\Listings\quest_3.
+>> m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\quest_3.obj (QUEST_3)
+
+
+LINK MAP OF MODULE:  .\Objects\quest_3 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?QUEST_3
+            IDATA   0010H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     00DAH     UNIT         ?PR?SENSOR_VERIFICATION?QUEST_3
+            CODE    08DAH     0014H     UNIT         ?PR?MAIN?QUEST_3
+            CODE    08EEH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\quest_3 (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?QUEST_3
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\quest_3 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:08EEH         SEGMENT       ?C_C51STARTUP
+  I:0010H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2017  19:44:40  PAGE 2
+
+
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:08F1H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:08EEH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:08EEH         LINE#         133
+  C:08F0H         LINE#         134
+  C:08F1H         LINE#         135
+  C:08F2H         LINE#         136
+  C:08F4H         LINE#         185
+  C:08F7H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        QUEST_3
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  B:00A8H.7       PUBLIC        EA
+  C:0800H         PUBLIC        sensor_verification
+  B:0090H.0       PUBLIC        P1_0
+  B:00A0H.0       PUBLIC        P2_0
+  B:0090H.1       PUBLIC        P1_1
+  B:00A0H.1       PUBLIC        P2_1
+  B:0090H.2       PUBLIC        P1_2
+  B:00A0H.2       PUBLIC        P2_2
+  B:0090H.3       PUBLIC        P1_3
+  B:00A0H.3       PUBLIC        P2_3
+  C:08DAH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  B:00A8H.0       PUBLIC        EX0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:0008H         PUBLIC        count0
+  D:000AH         PUBLIC        count1
+  D:000CH         PUBLIC        count2
+  D:000EH         PUBLIC        count3
+  -------         PROC          SENSOR_VERIFICATION
+  C:0800H         LINE#         17
+  C:0804H         LINE#         18
+  C:0806H         LINE#         19
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2017  19:44:40  PAGE 3
+
+
+  C:0809H         LINE#         20
+  C:080CH         LINE#         21
+  C:080EH         LINE#         22
+  C:0816H         LINE#         24
+  C:0819H         LINE#         25
+  C:081BH         LINE#         26
+  C:081DH         LINE#         27
+  C:081FH         LINE#         28
+  C:0821H         LINE#         29
+  C:0821H         LINE#         30
+  C:0824H         LINE#         31
+  C:0826H         LINE#         32
+  C:0828H         LINE#         33
+  C:082AH         LINE#         34
+  C:082CH         LINE#         35
+  C:082CH         LINE#         36
+  C:082FH         LINE#         37
+  C:0831H         LINE#         38
+  C:0833H         LINE#         39
+  C:0835H         LINE#         40
+  C:0837H         LINE#         41
+  C:0837H         LINE#         42
+  C:083AH         LINE#         43
+  C:083CH         LINE#         44
+  C:083EH         LINE#         45
+  C:0840H         LINE#         46
+  C:0842H         LINE#         47
+  C:0842H         LINE#         49
+  C:084FH         LINE#         50
+  C:0851H         LINE#         51
+  C:0851H         LINE#         52
+  C:086AH         LINE#         53
+  C:086CH         LINE#         55
+  C:086CH         LINE#         56
+  C:0885H         LINE#         57
+  C:0887H         LINE#         58
+  C:0889H         LINE#         60
+  C:0889H         LINE#         62
+  C:08A2H         LINE#         63
+  C:08A4H         LINE#         64
+  C:08A6H         LINE#         66
+  C:08A6H         LINE#         68
+  C:08BFH         LINE#         69
+  C:08C1H         LINE#         70
+  C:08C3H         LINE#         72
+  C:08C3H         LINE#         73
+  C:08CDH         LINE#         74
+  C:08CFH         LINE#         75
+  C:08D5H         LINE#         76
+  C:08D5H         LINE#         77
+  -------         ENDPROC       SENSOR_VERIFICATION
+  -------         PROC          MAIN
+  C:08DAH         LINE#         81
+  C:08DAH         LINE#         82
+  C:08DDH         LINE#         83
+  C:08DFH         LINE#         84
+  C:08E1H         LINE#         85
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2017  19:44:40  PAGE 4
+
+
+  C:08E3H         LINE#         86
+  C:08E5H         LINE#         87
+  C:08E7H         LINE#         88
+  C:08EAH         LINE#         90
+  C:08EAH         LINE#         91
+  C:08ECH         LINE#         92
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        QUEST_3
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0100H BYTE (12%) *
+******************************************************************************
+
+Program Size: data=17.0 xdata=0 code=256
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,166 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/09/2017  17:29:02  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\PrimeiroExo.obj TO .\Objects\quest_1 PRINT (.\Listings\ques
+>> t_1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\PrimeiroExo.obj (PRIMEIROEXO)
+
+
+LINK MAP OF MODULE:  .\Objects\quest_1 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     0065H     UNIT         ?PR?_DELAY?PRIMEIROEXO
+            CODE    0865H     0040H     UNIT         ?PR?ACIONARPEDIDO?PRIMEIROEXO
+            CODE    08A5H     000CH     UNIT         ?C_C51STARTUP
+            CODE    08B1H     000BH     UNIT         ?PR?MAIN?PRIMEIROEXO
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\quest_1 (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PRIMEIROEXO
+
+*** NEW ROOT ***************************************************
+
+?PR?ACIONARPEDIDO?PRIMEIROEXO
+  +--> ?PR?_DELAY?PRIMEIROEXO
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\quest_1 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:08A5H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2017  17:29:02  PAGE 2
+
+
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:08A8H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:08A5H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:08A5H         LINE#         133
+  C:08A7H         LINE#         134
+  C:08A8H         LINE#         135
+  C:08A9H         LINE#         136
+  C:08ABH         LINE#         185
+  C:08AEH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        PRIMEIROEXO
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  B:00A8H.7       PUBLIC        EA
+  B:0090H.0       PUBLIC        P1_0
+  C:0808H         PUBLIC        _delay
+  B:00A0H.0       PUBLIC        P2_0
+  B:0090H.1       PUBLIC        P1_1
+  B:00A0H.1       PUBLIC        P2_1
+  C:08B1H         PUBLIC        main
+  C:0865H         PUBLIC        acionarPedido
+  B:00A8H.0       PUBLIC        EX0
+  -------         PROC          L?0025
+  -------         ENDPROC       L?0025
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        ms
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0808H         LINE#         7
+  C:0808H         LINE#         9
+  C:0818H         LINE#         11
+  C:081FH         LINE#         12
+  C:082FH         LINE#         14
+  C:0836H         LINE#         15
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2017  17:29:02  PAGE 3
+
+
+  C:0846H         LINE#         17
+  C:084DH         LINE#         18
+  C:085DH         LINE#         20
+  C:0864H         LINE#         21
+  -------         ENDPROC       _DELAY
+  -------         PROC          ACIONARPEDIDO
+  C:0865H         LINE#         23
+  C:0876H         LINE#         25
+  C:087CH         LINE#         26
+  C:087CH         LINE#         27
+  C:087CH         LINE#         28
+  C:087FH         LINE#         29
+  C:0881H         LINE#         30
+  C:0883H         LINE#         31
+  C:0885H         LINE#         32
+  C:0887H         LINE#         33
+  C:088DH         LINE#         34
+  C:088DH         LINE#         35
+  C:088DH         LINE#         36
+  C:0890H         LINE#         37
+  C:0892H         LINE#         38
+  C:0894H         LINE#         39
+  C:0896H         LINE#         40
+  C:0896H         LINE#         41
+  -------         ENDPROC       ACIONARPEDIDO
+  -------         PROC          MAIN
+  C:08B1H         LINE#         43
+  C:08B1H         LINE#         44
+  C:08B4H         LINE#         45
+  C:08B6H         LINE#         46
+  C:08B8H         LINE#         47
+  C:08BAH         LINE#         48
+  C:08BAH         LINE#         50
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        PRIMEIROEXO
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00C2H BYTE ( 9%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=194
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
